@@ -1,0 +1,15 @@
+name = "qurvesheet-worker"
+main = "worker/index.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Non-secret vars here (GEMINI_API_KEY set via: wrangler secret put GEMINI_API_KEY)
+
+[[routes]]
+pattern = "qurvesheet.com/api/*"
+zone_name = "qurvesheet.com"
+
+[[routes]]
+pattern = "www.qurvesheet.com/api/*"
+zone_name = "qurvesheet.com"
